@@ -1,0 +1,115 @@
+form {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    height: 60%;
+    background-color: #303134;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.modal-container {
+    position: relative;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.open-modal {
+    will-change: transform;
+    animation: modal-move 0.5s ease both;
+}
+
+@keyframes modal-move {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+         transform: translateY(0px);
+         opacity: 1;
+        } 
+}
+  
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: clamp(20px, 2vw, 24px);
+    color: #fff;
+    width: 100%;
+    height: 80px;
+}
+  
+textarea {
+    width: calc(100%-25px);
+    height: 200px;
+    font-size: clamp(20px, 2vw, 22px);
+    text-align: center;
+    color: #fff;
+    background-color: #303134;
+    border: 1px solid #65686e;
+    border-radius: 2px;
+}
+  
+textarea::placeholder {
+  color: #a5a5a5;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: clamp(20px, 2vw, 22px);
+}
+  
+textarea:focus {
+    outline-color: rgb(199, 195, 195);
+}
+  
+.TodoForm-buttonContainer {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+  
+.TodoForm-button {
+    display: inline-block;
+    width: 130px;
+    height: 58px;
+    font-size: clamp(20px 2vw, 22px);
+    font-family: 'Montserrat';
+    font-weight: 400;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    background-color: #4c4d4f;
+}
+
+.TodoForm-button--add:hover {
+    background-color: #2ddbcb;
+    box-shadow: 2px 1px 17px #2ddbcb; 
+
+}
+  
+.TodoForm-button--cancel:hover {
+    background-color: #ff6347; 
+    box-shadow: 2px 1px 17px #ff6347; 
+}
+
+
+@media (max-width: 548px) {
+    form {
+        width: 80%;
+        max-width: 300px;
+        height: 50%;
+    }
+
+    .TodoForm-button {
+        width: 110px;
+        height: 48px;       
+    }
+}

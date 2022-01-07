@@ -1,0 +1,87 @@
+.TodoItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    background-color: #303134;
+    color: #fff;
+    margin-top: 24px;
+    border-radius: 8px;
+    border: 1px solid #f80000;
+    overflow: hidden;
+}
+
+.TodoItem:hover {
+    background-color: #444549;
+}
+
+.TodoItem:active {
+    border-color: #fff;
+}
+
+.TodoItem-completed {
+    border-color: green;
+}
+
+.TodoItem-p {
+    margin: 24px 0 24px 24px;
+    width: calc(100% - 120px);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.TodoItem-p--complete {
+    text-decoration: line-through;
+    border-color: red;
+}
+
+.Icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
+    font-size: 24px;
+    font-weight: bold;
+    /* background-color: rgb(60, 199, 209); */
+}
+
+.Icon-check {
+    position: absolute;
+    left: 12px;
+    transition: transform 0.3s ease;
+}
+
+.Icon-check:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.Icon-check--active {
+    color: #4caf50;
+}
+
+.Icon-delete {
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.Icon-delete:hover {
+    color: rgb(255, 0, 0);
+    transform: scale(1.2);   
+    transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .TodoItem {
+        width: 400px;
+        height: 100%;
+        max-height: 200px;
+    }
+}
